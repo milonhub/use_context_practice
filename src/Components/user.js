@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 import style from './User.module.css';
-import { UsersContext } from '../Hooks/usersContexthook';
+import useCustomContext from '../Hooks/useCustomContexthooks'
 
 const User = ({data}) => {
- const {userData, setUserData} = useContext(UsersContext)
+ const {userData, setUserData} = useCustomContext();
  const handleDelete = (id) => {
     
     const filterdUser = userData.filter((data) => {

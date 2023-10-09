@@ -1,9 +1,10 @@
-import React, { useContext } from 'react'
-import { UsersContext } from '../Hooks/usersContexthook';
+import React from 'react';
+
+import useCustomContext from '../Hooks/useCustomContexthooks';
 import User from './user';
 import style from "./Users.module.css";
 const Users = () => {
-    const {userData} = useContext(UsersContext);
+    const {userData} = useCustomContext()
   return (
     <div className= {style.container}>
         {userData.map((data) =>{

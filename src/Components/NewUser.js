@@ -1,10 +1,11 @@
-import React, { useState, useContext} from 'react'
-import { UsersContext } from '../Hooks/usersContexthook';
+import React, { useState} from 'react'
+import useCustomContext from '../Hooks/useCustomContexthooks';
+
 
 const NewUser = () => {
 
     const [newUser, setNewUser] = useState("");
-    const {userData, setUserData} = useContext(UsersContext)
+    const {userData, setUserData} = useCustomContext();
 
     const handleChange = (event) =>{
          setNewUser(event.target.value)
