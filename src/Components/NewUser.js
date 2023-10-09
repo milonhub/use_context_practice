@@ -4,7 +4,7 @@ import useCustomContext from '../Hooks/useCustomContexthooks';
 const NewUser = () => {
 
     const [newUser, setNewUser] = useState("");
-    const {userData, setUserData} = useCustomContext();
+    const { dispatch} = useCustomContext();
 
     const handleChange = (event) =>{
          setNewUser(event.target.value)
@@ -15,8 +15,9 @@ const NewUser = () => {
         
 
         const newUsers = {id:new Date().getTime().toString(), name:newUser}
-         setUserData([...userData, newUsers])
-        setNewUser("");
+         dispatch({type:"ADD_user", payload:newUsers})
+ 
+         setNewUser("");
     }
 
    

@@ -6,11 +6,11 @@ import style from "./Users.module.css";
 
 const Users = () => {
 
-    const {userData} = useCustomContext()
+    const {state} = useCustomContext()
 
   return (
     <div className= {style.container}>
-        {userData.map((data) =>{
+        {state.users.map((data) =>{
             return <User data ={data} />
         })}
     </div>

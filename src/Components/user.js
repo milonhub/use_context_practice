@@ -5,18 +5,10 @@ import useCustomContext from '../Hooks/useCustomContexthooks'
 
 const User = ({data}) => {
 
- const {userData, setUserData} = useCustomContext();
+ const { dispatch} = useCustomContext();
  const handleDelete = (id) => {
-    
- const filterdUser = userData.filter((data) => {
-
-      return ( data.id !== id)
-      
-    })
-
-    setUserData(filterdUser);
-
-  }
+    dispatch({type:"DELETE_USER", payload:id})
+ }
   return (
     <div className={style.card}>
         <h2>{data.id}</h2>
