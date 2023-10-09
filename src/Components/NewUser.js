@@ -1,7 +1,6 @@
 import React, { useState} from 'react'
 import useCustomContext from '../Hooks/useCustomContexthooks';
 
-
 const NewUser = () => {
 
     const [newUser, setNewUser] = useState("");
@@ -31,4 +30,4 @@ const NewUser = () => {
   )
 }
 
-export default NewUser
+export default NewUser;

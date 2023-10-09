@@ -1,15 +1,10 @@
 
-
 import NewUser from "./Components/NewUser";
 import Users from "./Components/users";
 import style from "./App.module.css";
- import ContextProvider from './Hooks/usersContexthook'
-
-
+import ContextProvider from './Hooks/usersContexthook'
 
 function App() {
-
-  
 
   return( 
       
@@ -19,11 +14,8 @@ function App() {
               <Users />
            </div>
           </ContextProvider>
-
-
   );
 
-  
 }
 
 export default App;

@@ -4,11 +4,14 @@ import style from './User.module.css';
 import useCustomContext from '../Hooks/useCustomContexthooks'
 
 const User = ({data}) => {
+
  const {userData, setUserData} = useCustomContext();
  const handleDelete = (id) => {
     
-    const filterdUser = userData.filter((data) => {
+ const filterdUser = userData.filter((data) => {
+
       return ( data.id !== id)
+      
     })
 
     setUserData(filterdUser);
